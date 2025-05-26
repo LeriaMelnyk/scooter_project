@@ -1,5 +1,7 @@
 package com.example.scooter;
 import com.example.scooter.repository.UserRepository;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -35,6 +37,7 @@ public class UserController {
 
         if (result.hasErrors()) {
             model.addAttribute("roles", User.Role.values());
+            model.addAttribute("bindingResult", result);
             return "register";
         }
 
@@ -43,31 +46,19 @@ public class UserController {
 
         userRepository.save(user);
         System.out.println("Збережений користувач: " + user.getName() + ", пароль: " + user.getPassword());
-
+        System.out.println(result.getAllErrors());
 
         return "redirect:/login";
     }
 
     @GetMapping("/login")
-    public String showLoginForm(Model model) {
+    public String showLoginForm(Model model, HttpServletRequest request) {
         model.addAttribute("user", new User());
+        model.addAttribute("request", request);
         return "login";
     }
 
-    @PostMapping("/login")
-    public String loginUser(@ModelAttribute("user") User user,
-                            Model model) {
-        Optional<User> optionalUser = userRepository.findByName(user.getName());
 
-        if (optionalUser.isPresent()) {
-            User foundUser = optionalUser.get();
-            if (passwordEncoder.matches(user.getPassword(), foundUser.getPassword())) {
-                return "redirect:/vehicles";
-            }
-        }
 
-        model.addAttribute("loginError", "Неправильне ім'я користувача або пароль");
-        return "login";
-    }
 }
 

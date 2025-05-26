@@ -24,7 +24,7 @@ public class User {
 
     @Setter
     @Enumerated(EnumType.STRING)
-    @Column(length = 10, nullable = false)
+    @Column(length = 20, nullable = false)
     public Role role;
 
     public User() {}

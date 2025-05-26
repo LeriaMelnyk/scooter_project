@@ -1,5 +1,6 @@
 @param String error = null
 @param String message = null
+@param jakarta.servlet.http.HttpServletRequest request
 
 <!DOCTYPE html>
 <html lang="uk">
@@ -280,11 +281,13 @@
         </div>
     @endif
 
+
+
     <form action="/login" method="post">
         <div class="form-group">
             <label for="username">Ім'я користувача</label>
             <input type="text"
-                   id="name"
+                   id="username"
                    name="name"
                    class="form-control"
                    required
@@ -312,6 +315,10 @@
             Увійти
         </button>
     </form>
+    @if(request.getParameter("error") != null)
+        <p style="color:red;">Неправильне ім’я користувача або пароль</p>
+    @endif
+
 
     <div class="social-login">
         <p>або</p>
