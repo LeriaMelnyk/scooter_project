@@ -1,7 +1,7 @@
-package com.example.scooter;
+package com.example.scooter.controllers;
+import com.example.scooter.data.User;
 import com.example.scooter.repository.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -10,8 +10,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
-
-import java.util.Optional;
 
 @Controller
 @RequiredArgsConstructor
@@ -41,7 +39,6 @@ public class UserController {
             return "register";
         }
 
-        // Шифруємо пароль перед збереженням
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         userRepository.save(user);

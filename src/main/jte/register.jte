@@ -1,4 +1,4 @@
-@import com.example.scooter.User
+@import com.example.scooter.data.User
 @param User user
 @param User.Role[] roles
 @param org.springframework.validation.BindingResult bindingResult = null

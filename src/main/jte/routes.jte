@@ -1,5 +1,5 @@
-@import com.example.scooter.Route
-@param Iterable<com.example.scooter.Route> routes
+@import com.example.scooter.data.Route
+@param Iterable<com.example.scooter.data.Route> routes
 
 
 <!DOCTYPE html>

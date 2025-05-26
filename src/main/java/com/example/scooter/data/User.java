@@ -1,4 +1,4 @@
-package com.example.scooter;
+package com.example.scooter.data;
 
 import jakarta.persistence.*;
 import lombok.Getter;

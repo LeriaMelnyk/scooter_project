@@ -1,5 +1,5 @@
-@import com.example.scooter.Vehicle
-@param Iterable<com.example.scooter.Vehicle> vehicles
+@import com.example.scooter.data.Vehicle
+@param Iterable<com.example.scooter.data.Vehicle> vehicles
 
 <!DOCTYPE html>
 <html>

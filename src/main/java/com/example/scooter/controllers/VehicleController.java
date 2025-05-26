@@ -1,6 +1,6 @@
-package com.example.scooter;
+package com.example.scooter.controllers;
 
-import com.example.scooter.Vehicle;
+import com.example.scooter.data.Vehicle;
 import com.example.scooter.repository.VehicleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

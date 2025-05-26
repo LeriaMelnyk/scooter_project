@@ -1,6 +1,6 @@
-package com.example.scooter;
+package com.example.scooter.security;
 
-import com.example.scooter.User;
+import com.example.scooter.data.User;
 import com.example.scooter.repository.UserRepository;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.*;

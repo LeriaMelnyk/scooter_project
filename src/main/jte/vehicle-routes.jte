@@ -1,4 +1,4 @@
-@import com.example.scooter.VehicleRoutes
+@import com.example.scooter.data.VehicleRoutes
 @param Iterable<VehicleRoutes> vehicleRoutes
 
 <!DOCTYPE html>

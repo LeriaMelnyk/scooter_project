@@ -1,6 +1,6 @@
 package com.example.scooter.repository;
 
-import com.example.scooter.Route;
+import com.example.scooter.data.Route;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

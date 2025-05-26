@@ -1,6 +1,6 @@
 package com.example.scooter.repository;
 
-import com.example.scooter.User;
+import com.example.scooter.data.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
