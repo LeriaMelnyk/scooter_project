@@ -8,44 +8,60 @@
     <title>Routes List</title>
     <style>
         body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            margin: 40px;
+            font-family: Arial, sans-serif;
+            background: #f0f0f5;
+            padding: 20px;
         }
 
         h1 {
+            color: #4b0082; /* темний фіолетовий */
             text-align: center;
-            color: #4a90e2;
+            margin-bottom: 30px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(107, 0, 255, 0.15);
+            overflow: hidden;
         }
 
         th, td {
-            padding: 12px 15px;
-            text-align: center;
-            border: 1px solid #ddd;
+            padding: 12px 20px;
+            text-align: left;
         }
 
-        th {
-            background-color: #4a90e2;
+        thead {
+            background: linear-gradient(90deg, #3b82f6, #9333ea, #ec4899);
             color: white;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            font-weight: 600;
         }
 
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
+        tbody tr:hover {
+            background-color: #f9f6ff;
         }
 
-        tr:hover {
-            background-color: #e0f7fa;
+        /* Стиль для бейджів у колонці ID */
+        td:first-child {
+            padding: 10px;
+        }
+
+        td:first-child > .badge {
+            display: inline-block;
+            min-width: 36px;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 50%;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            box-shadow:
+                    0 0 8px rgba(107, 0, 255, 0.6),
+                    0 4px 10px rgba(236, 72, 153, 0.5);
+            background: linear-gradient(135deg, #3b82f6, #9333ea, #ec4899);
+            user-select: none;
         }
     </style>
 </head>
